@@ -30,6 +30,10 @@ p{
     font-family: Verdana, sans-serif;
 }
 
+a{
+    color: #E05C5D;
+}
+
 button{
     padding: 10px 30px;
     background: transparent;
@@ -407,12 +411,13 @@ animation-delay: -4s;
     border-radius: 20px;
 }
 
-
-@media only screen and (max-width: 600px) {
-
-
-
+.icon{
+    width: 50px;
+    margin: 20px 2px 0 2px;
+    filter: invert(44%) sepia(58%) saturate(977%) hue-rotate(316deg) brightness(95%) contrast(83%);
 }
+
+@media only screen and (max-width: 600px) {...}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {...}
