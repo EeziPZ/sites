@@ -17,7 +17,7 @@ h2{
     color: #DE9126;
     margin: 0;
 }
-h3{
+h3, .title-container h2{
     font-size: 1.7em;
     font-weight: bold;
     color: #f0f6fc;
@@ -25,13 +25,17 @@ h3{
     margin: 0;
 }
 p{
-    color: #f0f6fc;
+    color: #d2d7d3;
     font-size: 1em;
     font-family: Verdana, sans-serif;
 }
 
 a{
     color: #E05C5D;
+    font-size: 1em;
+    font-weight: bold;
+    font-family: Verdana, sans-serif;
+    text-decoration: none;
 }
 
 button{
