@@ -30,6 +30,19 @@ p{
     font-family: Verdana, sans-serif;
 }
 
+button{
+    padding: 10px 30px;
+    background: transparent;
+    box-shadow: 0 0 8px 5px rgba(0, 0, 0, .2);
+    border-radius: 10px;
+    font-size: 1.2em;
+    font-family: monospace;
+    font-weight: bold;
+    color: #DE9126;
+    margin: 10px;
+    border: 2px solid #E05C5D;
+}
+
 .heading{
     text-align: center;
 }
@@ -362,7 +375,7 @@ animation-delay: -4s;
 
 .about-container{
     text-align: center;
-    margin: 40px 0;
+    margin: 40px 0 80px 0;
 }
 
 .underline-container{
@@ -377,6 +390,21 @@ animation-delay: -4s;
     background-color: #E05C5D;
     display: inline-block;
     transform: rotate(-45deg);
+}
+
+.work-container{
+    margin: 40px 0 80px 0;
+}
+
+.info-container{
+    text-align: center;
+    margin: 15px;
+}
+
+.image-container img{
+    width: 100%;
+    box-shadow: 0 0 8px 8px rgba(0, 0, 0, .2);
+    border-radius: 20px;
 }
 
 
