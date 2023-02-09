@@ -424,7 +424,6 @@ animation-delay: -4s;
 }
 
 .icon{
-    width: 50px;
     margin: 20px 2px 0 2px;
     filter: invert(44%) sepia(58%) saturate(977%) hue-rotate(316deg) brightness(95%) contrast(83%);
 }
