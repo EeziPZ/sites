@@ -47,6 +47,17 @@ button{
     border: 2px solid #E05C5D;
 }
 
+nav{
+    text-align: center;
+    margin-top: 20px;
+}
+nav a{
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 10px;
+    font-weight: bold;
+}
+
 .heading{
     text-align: center;
 }
@@ -65,13 +76,13 @@ button{
     margin: 0 auto;
     left: 0;
     right: 0;
-    top: 100px;
+    top: 140px;
     text-align: center;
 }
 
 
 .ball-container{
-    margin-top: 300px;
+    margin-top: 260px;
 }
 .disc-1 {
     position: relative;
