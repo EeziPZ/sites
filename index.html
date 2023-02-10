@@ -8,6 +8,17 @@
 	<title>Jamie Lake</title>
 </head>
 <body>
+
+	<!--Div that holds the fullscreen image-->
+	<div class="fullscreen">
+		<img src="" class="fullscreen-img">
+		<button class="close-button">Close</button>
+		<div class="nav-buttons">
+			<button class="prev-button">Previous</button>
+			<button class="next-button">Next</button>
+		</div>			
+	</div>
+
 	<div class="container">
 		<nav>
 			<a href="#about">About</a>
@@ -84,82 +95,135 @@
 			<div class="underline"></div>
 		</div>
 
-		<div class="work-container right">
-			<div class="image-container">
-				<img src="images/codeclub-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px">
+		<div id="codeclub" class="work-container right">
+			<div id="codeclub-card" class="visible card">
+				<div class="image-container">
+					<img src="images/codeclub-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px">
+				</div>
+				<div class="info-container">
+					<h3>Code Club ZA</h3>
+					<p>A user-friendly membership website with a fully automated online coding course, featuring custom support for schools and learning centers.</p>
+					<button id="codeclub-btn" onclick="toggleVisibility('codeclub')">Read More</button>
+				</div>
 			</div>
-			<div class="info-container">
-				<h3>Code Club ZA</h3>
-				<p>A user-friendly membership website with a fully automated online coding course, featuring custom support for schools and learning centers.</p>
-				<button>Read More</button>
+
+			<div id="codeclub-page" class="hidden page">
+
+				<div class="image-container">
+					<img src="images/codeclub-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px" class="thumbnail">
+					<img src="images/inspira-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px"class="thumbnail">
+					<img src="images/boogames-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px"class="thumbnail">
+				</div>
+
+				
+				<div class="info-container">
+					<button>View Site</button>
+					<button onclick="toggleVisibility('codeclub')">Close</button>
+					<p>Code Club South Africa was a personal project I embarked on to provide an online coding course for beginners.</p>
+					<p>The website features a membership system that accepts payments in South African Rands and integrates with the LearnDash LMS for a fully automated experience.</p>
+					<p>Additionally, I added support for schools and learning centers by creating a front-end interface for them to monitor and interact with their students, including custom redirects to create a personalized experience based on user roles.</p>
+					<h3>Challenges Overcome:</h3>
+					<p>The main challenges in creating this site were developing a membership system that was both user-friendly, fully automated with LearnDash and accepted South African Rands. Another challenge was creating a front-end interface for teachers that was intuitive and easy to use. Despite these challenges, I was able to successfully create a platform that met the needs of my target audience.</p>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="work-container left">
+
+			<div id="inspira-card" class="visible card">
+				<div class="image-container">
+					<img src="images/inspira-cover-sm.webp" alt="Inspira Features Homepage" width="640px" height="400px">
+				</div>
+				<div class="info-container">
+					<h3>Inspira Features</h3>
+					<p>A custom WordPress site that implements Elementor for easy future updates and changes.</p>
+					<button onclick="toggleVisibility('inspira')" id="inspira-btn">Read More</button>
+				</div>
+			</div>
+
+			<div id="inspira-page" class="hidden page">
+				<div class="image-container">
+					<img src="images/inspira-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px"class="thumbnail">
+					<img src="images/inspira-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px"class="thumbnail">
+					<img src="images/inspira-cover-sm.webp" alt="Code Club ZA Homepage" width="640px" height="400px"class="thumbnail">
+					
+				</div>
+
+				
+				<div class="info-container">
+					<button>View Site</button>
+					<button onclick="toggleVisibility('inspira')">Close</button>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="work-container right">
+			<div id="tmams-card" class="visible card">
+				<div class="image-container">
+					<img src="images/tmams-cover-sm.webp" alt="The Meadows at Millstream Homepage" width="640px" height="400px">
+				</div>
+				<div class="info-container">
+					<h3>The Meadows</h3>
+					<p>A website designed for a self-catering accommodation business, featuring an integrated online booking system.</p>
+					<button onclick="toggleVisibility('tmams')" id="tmams-btn">Read More</button>
+				</div>
 			</div>
 		</div>
 
 		<div class="work-container left">
-			<div class="image-container">
-				<img src="images/inspira-cover-sm.webp" alt="Inspira Features Homepage" width="640px" height="400px">
-			</div>
-			<div class="info-container">
-				<h3>Inspira Features</h3>
-				<p>A custom WordPress site that implements Elementor for easy future updates and changes.</p>
-				<button>Read More</button>
-			</div>
-		</div>
-
-		<div class="work-container right">
-			<div class="image-container">
-				<img src="images/tmams-cover-sm.webp" alt="The Meadows at Millstream Homepage" width="640px" height="400px">
-			</div>
-			<div class="info-container">
-				<h3>The Meadows</h3>
-				<p>A website designed for a self-catering accommodation business, featuring an integrated online booking system.</p>
-				<button>Read More</button>
-			</div>
-		</div>
-
-		<div class="work-container left">
-			<div class="image-container">
-				<img src="images/boogames-cover-sm.webp" alt="Boo Games Homepage" width="640px" height="400px">
-			</div>
-			<div class="info-container">
-				<h3>Boo Games</h3>
-				<p>A website created for an e-sports organization to manage leagues, post results, and keep members informed with regular updates.</p>
-				<button>Read More</button>
+			<div id="boogames-card" class="visible card">
+				<div class="image-container">
+					<img src="images/boogames-cover-sm.webp" alt="Boo Games Homepage" width="640px" height="400px">
+				</div>
+				<div class="info-container">
+					<h3>Boo Games</h3>
+					<p>A website created for an e-sports organization to manage leagues, post results, and keep members informed with regular updates.</p>
+					<button onclick="toggleVisibility('boogames')" id="boogames-btn">Read More</button>
+				</div>
 			</div>
 		</div>
 
 
 		<div class="work-container right">
-			<div class="image-container">
-				<img src="images/rivaero-cover-sm.webp" alt="Rivaero Homepage" width="640px" height="400px">
-			</div>
-			<div class="info-container">
-				<h3>Rivaero</h3>
-				<p>A website rebuild for responsiveness and compatibility with modern browsers, while retaining a similar design as per the client's request.</p>
-				<button>Read More</button>
+			<div id="rivaero-card" class="visible card">
+				<div class="image-container">
+					<img src="images/rivaero-cover-sm.webp" alt="Rivaero Homepage" width="640px" height="400px">
+				</div>
+				<div class="info-container">
+					<h3>Rivaero</h3>
+					<p>A website rebuild for responsiveness and compatibility with modern browsers, while retaining a similar design as per the client's request.</p>
+					<button onclick="toggleVisibility('rivaero')" id="rivaero-btn">Read More</button>
+				</div>
 			</div>
 		</div>
 
 
 		<div class="work-container left">
-			<div class="image-container">
-				<img src="images/willover-cover-sm.webp" alt="Willover Product Page" width="640px" height="400px">
-			</div>
-			<div class="info-container">
-				<h3>Willover</h3>
-				<p>A website designed to complement the client's e-commerce platform by providing more information while preserving the existing look and feel.</p>
-				<button>Read More</button>
+			<div id="willover-card" class="visible card">
+				<div class="image-container">
+					<img src="images/willover-cover-sm.webp" alt="Willover Product Page" width="640px" height="400px">
+				</div>
+				<div class="info-container">
+					<h3>Willover</h3>
+					<p>A website designed to complement the client's e-commerce platform by providing more information while preserving the existing look and feel.</p>
+					<button onclick="toggleVisibility('willover')" id="willover-btn">Read More</button>
+				</div>
 			</div>
 		</div>
 
 		<div class="work-container right">
-			<div class="image-container">
-				<img src="images/bbbnb-cover-sm.webp" alt="Beach Break B&B Homepage" width="640px" height="400px">
-			</div>
-			<div class="info-container">
-				<h3>Beach Break B&B</h3>
-				<p>A website completed in a single day, enabling the client to fulfill their accomodation contract requirements with a German company.</p>
-				<button>Read More</button>
+			<div id="bbbnb-card" class="visible card">
+				<div class="image-container">
+					<img src="images/bbbnb-cover-sm.webp" alt="Beach Break B&B Homepage" width="640px" height="400px">
+				</div>
+				<div class="info-container">
+					<h3>Beach Break B&B</h3>
+					<p>A website completed in a single day, enabling the client to fulfill their accomodation contract requirements with a German company.</p>
+					<button onclick="toggleVisibility('bbbnb')" id="bbbnb-btn">Read More</button>
+				</div>
 			</div>
 		</div>
 
