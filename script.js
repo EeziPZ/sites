@@ -1,55 +1,48 @@
-var thumbnails = document.querySelectorAll(".thumbnail");
-var fullscreen = document.querySelector(".fullscreen");
-var fullscreenImg = document.querySelector(".fullscreen-img");
-var closeButton = document.querySelector(".close-button");
-var prevButton = document.querySelector(".prev-button");
-var nextButton = document.querySelector(".next-button");
-var isTransitioning = false;
+const readmoreBtn = document.querySelectorAll(".toggleVisibility");
 
-let currentIndex = 0;
+function toggleVisibility(id) {
+  let elementId = id.replace('btn', '');
+  document.getElementById(elementId + "card").classList.toggle("visible");
+  document.getElementById(elementId + "card").classList.toggle("hidden");
+  document.getElementById(elementId + "page").classList.toggle("hidden");
+  document.getElementById(elementId + "page").classList.toggle("visible");
+}
 
-for (let i = 0; i < thumbnails.length; i++) {
-  thumbnails[i].addEventListener("click", function () {
-    currentIndex = i;
-    fullscreenImg.src = this.src;
-    fullscreen.style.display = "flex";
-    document.body.style.overflow = "hidden";
+
+for (let i = 0; i < readmoreBtn.length; i++) {
+  readmoreBtn[i].addEventListener('click', (e) => {
+    let elementId = e.target.id;
+    if (elementId !== '') {
+      toggleVisibility(elementId);
+    } else { 
+      console.log("An element without an id was clicked.");
+    }
   });
 }
 
-closeButton.addEventListener("click", function () {
-  fullscreen.style.display = "none";
-  document.body.style.overflow = "visible";
-});
 
-prevButton.addEventListener("click", function () {
-  if (isTransitioning) {
-    return;
-  }
-  isTransitioning = true;
-  currentIndex = (currentIndex + thumbnails.length - 1) % thumbnails.length;
-  fullscreenImg.src = thumbnails[currentIndex].src;
-});
+const thumbnails = document.querySelectorAll('.thumbnail');
+const fullscreenImgContainer = document.createElement('div');
+fullscreenImgContainer.classList.add('fullscreen-img');
 
-fullscreenImg.addEventListener("load", function () {
-  setTimeout(function () {
-    isTransitioning = false;
-  }, 300);
-});
+const closeButton = document.createElement('span');
+closeButton.classList.add('close-button');
+closeButton.innerHTML = '&times;';
 
-nextButton.addEventListener("click", function () {
-  if (isTransitioning) {
-    return;
-  }
-  isTransitioning = true;
-  currentIndex = (currentIndex + 1) % thumbnails.length;
-  fullscreenImg.src = thumbnails[currentIndex].src;
-});
+const fullscreenImg = document.createElement('img');
+fullscreenImgContainer.appendChild(fullscreenImg);
+fullscreenImgContainer.appendChild(closeButton);
 
-
-function toggleVisibility(id) {
-  document.getElementById(id + "-card").classList.toggle("visible");
-  document.getElementById(id + "-card").classList.toggle("hidden");
-  document.getElementById(id + "-page").classList.toggle("hidden");
-  document.getElementById(id + "-page").classList.toggle("visible");
+for (const thumbnail of thumbnails) {
+  thumbnail.addEventListener('click', function () {
+    let imgsrc = this.src.replace('-sm', '');
+    fullscreenImg.src = imgsrc;
+    document.body.appendChild(fullscreenImgContainer);
+    document.body.classList.add('no-scroll');
+  });
 }
+
+closeButton.addEventListener('click', function () {
+  fullscreenImgContainer.remove();
+  document.body.classList.remove('no-scroll');
+});
