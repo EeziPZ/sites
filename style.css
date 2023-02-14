@@ -432,12 +432,6 @@ animation-delay: -4s;
 }
 
 
-.info-text{
-    margin-top: 20px;
-}
-
-
-
 .visible{
     display: inline;
 }
@@ -452,20 +446,30 @@ animation-delay: -4s;
 .page .info-container{
     margin: 15px 15px 0 15px;
 }
+.page .info-container h3{
+    margin-top: 30px;
+}
 
 
-
+.btn-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
 .page .image-container{
     display: flex;
-    overflow-x: auto;
+    overflow-x: scroll;
     white-space: nowrap;
-
+    user-select: none;
 }
+
+
 .page .image-container img{
     margin-right: 20px;
+    width: fit-content;
 }
 
 
@@ -542,39 +546,66 @@ body.no-scroll {
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
     .work-container{
-        display: flex;
         justify-content: center;
         margin-bottom: 100px;
         max-width: 720px;
     }
-    .info-container{
+
+    .visible{
+        display: flex;
+    }
+    
+
+    .card{
+        width: 100%;
+    }
+
+    .card .info-container{
         max-width: 300px;
         position: relative;
     }
-    .info-container button{
+    .card .info-container button{
         margin: 0;
         position: absolute;
         bottom: 0;
     }
-    .work-container.right .image-container{
+    .work-container.right .card .image-container{
         order: 1;
     }
-    .work-container.left .image-container{
+    .work-container.left .card .image-container{
         order: 2;
     }
-    .work-container.right .info-container{
+    .work-container.right .card .info-container{
         order: 2;
         text-align: left;
-        margin: 10px 0 10px 20px;
+        margin: 10px 10px 10px 10px;
     }
-    .work-container.left .info-container{
+    .work-container.left .card .info-container{
         order: 1;
         text-align: right;
         margin: 10px 20px 10px 0px;
     }
-    .work-container.left .info-container button{
+    .work-container.left .card .info-container button{
         right: 0;
     }
+
+
+    .page.visible{
+        display: inline;
+    }
+    .image-container{
+        max-width: 100%;
+    }
+    .image-container img{
+        max-width: 400px;
+    }
+    .page .info-container{
+        max-width: 100%;
+        margin: 10px 10px 10px 20px;
+    }
+
+
+
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -582,11 +613,8 @@ body.no-scroll {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    .work-container{
+    .cards-container{
         transform: scale(1.2);
-        margin: 100px auto 150px auto;
-    }
-    .about-container{
-        transform: scale(1.2);
+        margin-top: 350px;
     }
 } 
