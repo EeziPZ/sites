@@ -45,4 +45,5 @@ for (const thumbnail of thumbnails) {
 closeButton.addEventListener('click', function () {
   fullscreenImgContainer.remove();
   document.body.classList.remove('no-scroll');
+  fullscreenImg.src = '';
 });
