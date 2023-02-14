@@ -402,11 +402,12 @@ animation-delay: -4s;
     margin: 0 20px;
 }
 
-.about-container{
+.about-container, .contact-container{
     text-align: center;
     margin: 40px auto 80px auto; 
     max-width: 900px;
 }
+
 
 .underline-container{
     text-align: center;
@@ -618,7 +619,7 @@ body.no-scroll {
         margin: 350px auto;
         transform: scale(1.2);
     }
-    .about-container{
+    .contact-container{
         padding-bottom: 50px;
     }
 } 
