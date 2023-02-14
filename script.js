@@ -1,7 +1,7 @@
 const readmoreBtn = document.querySelectorAll(".toggleVisibility");
 
 function toggleVisibility(id) {
-  let elementId = id.replace('btn', '');
+  let elementId = id.replace(/(rm|cl)-btn$/, '');
   document.getElementById(elementId + "card").classList.toggle("visible");
   document.getElementById(elementId + "card").classList.toggle("hidden");
   document.getElementById(elementId + "page").classList.toggle("hidden");
