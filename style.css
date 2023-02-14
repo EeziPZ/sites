@@ -613,5 +613,12 @@ body.no-scroll {
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
-    
+    .content-container{
+        max-width: 1000px;
+        margin: 350px auto;
+        transform: scale(1.2);
+    }
+    .about-container{
+        padding-bottom: 50px;
+    }
 } 
