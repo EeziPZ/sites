@@ -613,11 +613,14 @@ body.no-scroll {
 @media only screen and (min-width: 992px) {...}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1500px) {
     .content-container{
-        max-width: 1000px;
-        margin: 350px auto;
-        transform: scale(1.2);
+        margin: 160px auto;
+        transform: translate(-50%, -50%) scale(1.2) translate(0%, 50%);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        box-sizing: border-box;
     }
     .contact-container{
         padding-bottom: 50px;
