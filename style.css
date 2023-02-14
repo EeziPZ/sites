@@ -32,6 +32,13 @@ p{
     font-family: Verdana, sans-serif;
 }
 
+li{
+    color: #d2d7d3;
+    font-size: 0.9em;
+    font-family: Verdana, sans-serif;
+    margin: 10px 0;
+}
+
 a{
     color: #DE9126;
     font-size: 1em;
@@ -423,6 +430,13 @@ animation-delay: -4s;
     background-color: rgba(0, 0, 0, 0.1);
     max-width: 400px;
 }
+
+
+.info-text{
+    margin-top: 20px;
+}
+
+
 
 .visible{
     display: inline;
