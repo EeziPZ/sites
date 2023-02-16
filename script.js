@@ -53,40 +53,28 @@ closeButton.addEventListener('click', function () {
 
 
 
+
+
 var r = document.querySelector(':root');
+var toggle = document.getElementById('toggle');
+
+toggle.checked = false;
 
 function toggleTheme() {
-
   var skyContainer = document.getElementById('header-container');
   if (skyContainer.classList.contains('night-gradient')){
     skyContainer.classList.add('day-gradient');
+    skyContainer.classList.remove('night-gradient');
 
-    setTimeout(function() {
-      skyContainer.classList.remove('night-gradient');
-    }, 50);
     
   }else{
     skyContainer.classList.add('night-gradient');
-
-    setTimeout(function() {
     skyContainer.classList.remove('day-gradient');
-    }, 50);
+    
     
   }
-
-
-
   const currentBodyColor = r.style.getPropertyValue('--body-color');
   const newBodyColor = currentBodyColor === 'white' ? '#043959' : 'white';
   r.style.setProperty('--body-color', newBodyColor);
 }
-const toggle = document.getElementById('toggle');
 toggle.addEventListener('change', toggleTheme);
-
-
-
-setTimeout(function() {
-    skyContainer.classList.add('day-gradient');
-  }, 10);
-
-
