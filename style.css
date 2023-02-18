@@ -4,6 +4,11 @@
     --landscape-2-color: #72aee6;
     --landscape-3-color: #4f94d4;
     --landscape-4-color: #135e96;
+
+    --disk-1-color: #72aee6;
+    --disk-2-color: #9ec2e6;
+    --disk-3-color: #f0f6fc;
+
     --body-color: #043959;
     transition: all 0.5s ease;
 }
@@ -217,7 +222,7 @@ input:checked + .slider.round:before {
     margin: auto;
     width: 350px;
     height: 350px;
-    background: #72aee6;
+    background: var(--disk-1-color);
     opacity: 0.2;
     border-radius: 50%;
     animation: glow infinite 3s;
@@ -229,7 +234,7 @@ input:checked + .slider.round:before {
     width: 260px;
     height: 260px;
     top: -305px;
-    background: #9ec2e6;
+    background: var(--disk-2-color);
     opacity: 0.4;
     border-radius: 50%;
     animation: glow infinite 2s;
@@ -243,7 +248,7 @@ input:checked + .slider.round:before {
     height: 180px;
     top: -525px;
     border-radius: 50%;
-    background: #f0f6fc;
+    background: var(--disk-3-color);
     opacity: 0.6;
 }
 @keyframes glow {

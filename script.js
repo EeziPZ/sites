@@ -75,6 +75,8 @@ function toggleTheme() {
   const newBodyColor = currentBodyColor === '#92C4BF' ? '#043959' : '#92C4BF';
   r.style.setProperty('--body-color', newBodyColor);
 
+
+
   const currentLS1Color = r.style.getPropertyValue('--landscape-1-color');
   const newLS1Color = currentLS1Color === '#C8E4E5' ? '#9ec2e6' : '#C8E4E5';
   r.style.setProperty('--landscape-1-color', newLS1Color);
@@ -92,6 +94,18 @@ function toggleTheme() {
   r.style.setProperty('--landscape-4-color', newLS4Color);
 
 
+
+  const currentD1Color = r.style.getPropertyValue('--disk-1-color');
+  const newD1Color = currentD1Color === '#FFFCE6' ? '#72aee6' : '#FFFCE6';
+  r.style.setProperty('--disk-1-color', newD1Color);
+
+  const currentD2Color = r.style.getPropertyValue('--disk-2-color');
+  const newD2Color = currentD2Color === '#FFF9CC' ? '#9ec2e6' : '#FFF9CC';
+  r.style.setProperty('--disk-2-color', newD2Color);
+
+  const currentD3Color = r.style.getPropertyValue('--disk-3-color');
+  const newD3Color = currentD3Color === '#FFD700' ? '#f0f6fc' : '#FFD700';
+  r.style.setProperty('--disk-3-color', newD3Color);
 
 
 }
