@@ -65,16 +65,34 @@ function toggleTheme() {
   if (skyContainer.classList.contains('night-gradient')){
     skyContainer.classList.add('day-gradient');
     skyContainer.classList.remove('night-gradient');
-
-    
   }else{
     skyContainer.classList.add('night-gradient');
     skyContainer.classList.remove('day-gradient');
-    
-    
   }
+
+
   const currentBodyColor = r.style.getPropertyValue('--body-color');
-  const newBodyColor = currentBodyColor === 'white' ? '#043959' : 'white';
+  const newBodyColor = currentBodyColor === '#92C4BF' ? '#043959' : '#92C4BF';
   r.style.setProperty('--body-color', newBodyColor);
+
+  const currentLS1Color = r.style.getPropertyValue('--landscape-1-color');
+  const newLS1Color = currentLS1Color === '#C8E4E5' ? '#9ec2e6' : '#C8E4E5';
+  r.style.setProperty('--landscape-1-color', newLS1Color);
+
+  const currentLS2Color = r.style.getPropertyValue('--landscape-2-color');
+  const newLS2Color = currentLS2Color === '#BCE1E1' ? '#72aee6' : '#BCE1E1';
+  r.style.setProperty('--landscape-2-color', newLS2Color);
+
+  const currentLS3Color = r.style.getPropertyValue('--landscape-3-color');
+  const newLS3Color = currentLS3Color === '#AED6D5' ? '#4f94d4' : '#AED6D5';
+  r.style.setProperty('--landscape-3-color', newLS3Color);
+
+  const currentLS4Color = r.style.getPropertyValue('--landscape-4-color');
+  const newLS4Color = currentLS4Color === '#A3D0C8' ? '#135e96' : '#A3D0C8';
+  r.style.setProperty('--landscape-4-color', newLS4Color);
+
+
+
+
 }
 toggle.addEventListener('change', toggleTheme);
