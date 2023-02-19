@@ -101,12 +101,12 @@ nav a{
 }
 .night-gradient{
     background-image: linear-gradient(to bottom, #01263a, #4f94d4);
-    animation: gradient-transition 0.5s ease forwards;
+    animation: gradient-transition 0.7s ease forwards;
     opacity: 0;
 }
 .day-gradient{
     background-image: linear-gradient(to bottom, #77C1E1, #DEF2FF);
-    animation: gradient-transition2 0.5s ease forwards;
+    animation: gradient-transition2 0.7s ease forwards;
     opacity: 0;
 }
 @keyframes gradient-transition {

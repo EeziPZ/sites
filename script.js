@@ -57,6 +57,7 @@ closeButton.addEventListener('click', function () {
 
 var r = document.querySelector(':root');
 var toggle = document.getElementById('toggle');
+const stars = document.querySelectorAll('.star');
 
 toggle.checked = false;
 
@@ -107,6 +108,12 @@ function toggleTheme() {
   const newD3Color = currentD3Color === '#FFD700' ? '#f0f6fc' : '#FFD700';
   r.style.setProperty('--disk-3-color', newD3Color);
 
+
+
+  
+  for (const star of stars) {
+    star.classList.toggle('star');
+  }
 
 }
 toggle.addEventListener('change', toggleTheme);
