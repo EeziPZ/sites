@@ -109,11 +109,18 @@ function toggleTheme() {
   r.style.setProperty('--disk-3-color', newD3Color);
 
 
-
-  
   for (const star of stars) {
     star.classList.toggle('star');
   }
+
+  const currentPColor = r.style.getPropertyValue('--p-color');
+  const newPColor = currentPColor === '#474b48' ? '#d2d7d3' : '#474b48';
+  r.style.setProperty('--p-color', newPColor);
+
+
+  const currentHColor = r.style.getPropertyValue('--heading-color');
+  const newHColor = currentHColor === '#955400' ? '#DE9126' : '#955400';
+  r.style.setProperty('--heading-color', newHColor);
 
 }
 toggle.addEventListener('change', toggleTheme);
