@@ -141,5 +141,16 @@ function toggleTheme() {
   const newIconColor = currentIconColor === 'invert(35%) sepia(21%) saturate(782%) hue-rotate(71deg) brightness(101%) contrast(92%)' ? 'invert(44%) sepia(58%) saturate(977%) hue-rotate(316deg) brightness(95%) contrast(83%)' : 'invert(35%) sepia(21%) saturate(782%) hue-rotate(71deg) brightness(101%) contrast(92%)';
   r.style.setProperty('--icon-color', newIconColor);
 
+
+
+
+  const currentT1Color = r.style.getPropertyValue('--tree-color-1');
+  const newT1Color = currentT1Color === '#00D420' ? '#386fa4' : '#00D420';
+  r.style.setProperty('--tree-color-1', newT1Color);
+
+  const currentT2Color = r.style.getPropertyValue('--tree-color-2');
+  const newT2Color = currentT2Color === '#00A819' ? '#133c55' : '#00A819';
+  r.style.setProperty('--tree-color-2', newT2Color);
+
 }
 toggle.addEventListener('change', toggleTheme);
