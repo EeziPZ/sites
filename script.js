@@ -97,11 +97,11 @@ function toggleTheme() {
 
 
   const currentD1Color = r.style.getPropertyValue('--disk-1-color');
-  const newD1Color = currentD1Color === '#FFFCE6' ? '#72aee6' : '#FFFCE6';
+  const newD1Color = currentD1Color === '#FFF69E' ? '#72aee6' : '#FFF69E';
   r.style.setProperty('--disk-1-color', newD1Color);
 
   const currentD2Color = r.style.getPropertyValue('--disk-2-color');
-  const newD2Color = currentD2Color === '#FFF9CC' ? '#9ec2e6' : '#FFF9CC';
+  const newD2Color = currentD2Color === '#FFF69E' ? '#9ec2e6' : '#FFF69E';
   r.style.setProperty('--disk-2-color', newD2Color);
 
   const currentD3Color = r.style.getPropertyValue('--disk-3-color');
@@ -119,8 +119,27 @@ function toggleTheme() {
 
 
   const currentHColor = r.style.getPropertyValue('--heading-color');
-  const newHColor = currentHColor === '#955400' ? '#DE9126' : '#955400';
+  const newHColor = currentHColor === '#34495e' ? '#DE9126' : '#34495e';
   r.style.setProperty('--heading-color', newHColor);
+
+
+  const currentAColor = r.style.getPropertyValue('--accent-color');
+  const newAColor = currentAColor === '#436e43' ? '#e05c5d' : '#436e43';
+  r.style.setProperty('--accent-color', newAColor);
+
+
+  const currentH3Color = r.style.getPropertyValue('--heading-3-color');
+  const newH3Color = currentH3Color === '#1c2833' ? '#f0f6fc' : '#1c2833';
+  r.style.setProperty('--heading-3-color', newH3Color);
+
+  const currentWBGColor = r.style.getPropertyValue('--work-container-bg');
+  const newWBGColor = currentWBGColor === 'rgba(177, 240, 233, 0.1)' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(177, 240, 233, 0.1)';
+  r.style.setProperty('--work-container-bg', newWBGColor);
+
+
+  const currentIconColor = r.style.getPropertyValue('--icon-color');
+  const newIconColor = currentIconColor === 'invert(35%) sepia(21%) saturate(782%) hue-rotate(71deg) brightness(101%) contrast(92%)' ? 'invert(44%) sepia(58%) saturate(977%) hue-rotate(316deg) brightness(95%) contrast(83%)' : 'invert(35%) sepia(21%) saturate(782%) hue-rotate(71deg) brightness(101%) contrast(92%)';
+  r.style.setProperty('--icon-color', newIconColor);
 
 }
 toggle.addEventListener('change', toggleTheme);

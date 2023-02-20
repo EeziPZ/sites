@@ -9,9 +9,15 @@
     --disk-2-color: #9ec2e6;
     --disk-3-color: #f0f6fc;
 
+    --work-container-bg: rgba(0, 0, 0, 0.1);
+
+    --icon-color: invert(44%) sepia(58%) saturate(977%) hue-rotate(316deg) brightness(95%) contrast(83%);
+
     --body-color: #043959;
     --p-color: #d2d7d3;
     --heading-color: #DE9126;
+    --heading-3-color: #f0f6fc;
+    --accent-color: #e05c5d;
     transition: all 0.5s ease;
 }
   
@@ -40,7 +46,7 @@ h2{
 h3, .title-container h2{
     font-size: 1.7em;
     font-weight: bold;
-    color: #f0f6fc;
+    color: var(--heading-3-color);
     opacity: 0.9;
     margin: 0;
 }
@@ -68,14 +74,14 @@ a{
 button{
     padding: 10px 30px;
     background: transparent;
-    box-shadow: 0 0 8px 5px rgba(0, 0, 0, .2);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .2);
     border-radius: 10px;
     font-size: 1.2em;
     font-family: monospace;
     font-weight: bold;
     color: var(--heading-color);
     margin: 10px;
-    border: 2px solid #E05C5D;
+    border: 2px solid var(--accent-color);
     cursor: pointer;
 }
 
@@ -513,7 +519,7 @@ animation-delay: -4s;
 
 
 .content-container{
-    margin: 0 20px;
+    margin: 20px 20px;
 }
 
 .about-container, .contact-container{
@@ -532,17 +538,17 @@ animation-delay: -4s;
 .underline{
     height: 7px;
     width: 7px;
-    background-color: #E05C5D;
+    background-color: var(--accent-color);
     display: inline-block;
     transform: rotate(-45deg);
 }
 
 .work-container{
     margin: 40px auto 80px auto;
-    box-shadow: 0 0 8px 4px rgba(0, 0, 0, .3);
+    box-shadow: 0 0 8px 2px rgba(0, 0, 0, .3);
     padding: 20px 0;
     border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: var(--work-container-bg);
     max-width: 400px;
 }
 
@@ -647,7 +653,7 @@ body.no-scroll {
 
 .icon{
     margin: 20px 2px 0 2px;
-    filter: invert(44%) sepia(58%) saturate(977%) hue-rotate(316deg) brightness(95%) contrast(83%);
+    filter: var(--icon-color);
 }
 
 
