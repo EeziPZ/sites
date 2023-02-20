@@ -24,16 +24,12 @@
     transition: all 0.5s ease;
 }
   
-
-
 html, body{
     margin: 0;
     padding: 0;
     background-color: var(--body-color);
     font-family: monospace;
 }
-
-
 h1{
     font-size: 4.5em;
     font-weight: bold;
@@ -58,14 +54,12 @@ p{
     font-size: 1em;
     font-family: Verdana, sans-serif;
 }
-
 li{
     color: var(--p-color);
     font-size: 0.9em;
     font-family: Verdana, sans-serif;
     margin: 10px 0;
 }
-
 a{
     color: var(--heading-color);
     font-size: 1em;
@@ -73,7 +67,6 @@ a{
     font-family: Verdana, sans-serif;
     text-decoration: none;
 }
-
 button{
     padding: 10px 30px;
     background: transparent;
@@ -90,7 +83,6 @@ button{
 button:hover{
     transform: scale(1.04);
 }
-
 nav{
     text-align: center;
     margin-top: 20px;
@@ -106,13 +98,13 @@ nav a{
     text-align: center;
 }
 
-
 .container {
     width: 100%;
     height: 600px;
     position: relative;
     overflow: hidden;
 }
+
 .night-gradient{
     background-image: linear-gradient(to bottom, #01263a, #4f94d4);
     animation: gradient-transition 0.7s ease forwards;
@@ -140,8 +132,6 @@ nav a{
   }
 }
 
-
-
 .title-container{
     position: absolute;
     margin: 0 auto;
@@ -150,7 +140,6 @@ nav a{
     top: 140px;
     text-align: center;
 }
-
 
 .switch {
   position: relative;
@@ -222,12 +211,6 @@ input:checked + .slider.round:before {
   background-color: rgba(0, 0, 0, 0);
 }
 
-
-
-
-
-
-
 .ball-container{
     margin-top: 260px;
 }
@@ -273,8 +256,6 @@ input:checked + .slider.round:before {
     transform: scale(1.05);
   }
 }
-
-
 
 .landscape-1 {
     position: absolute;
@@ -383,6 +364,7 @@ input:checked + .slider.round:before {
     clip-path: polygon(50% 0%, 22% 100%, 75% 100%);
     box-shadow: 2px 0 2px 4px rgba(0, 0, 0, .1);
 }
+
 .star {
     position: absolute;
     width: 2px;
@@ -392,8 +374,6 @@ input:checked + .slider.round:before {
     animation-duration: 10s;
     animation-iteration-count: infinite;
 }
-
-
 .s1 {
     top: 50px;
     left: 10%;
@@ -404,97 +384,95 @@ input:checked + .slider.round:before {
     animation-delay: -1s;
 }
 .s3 {
-top: 300px;
-left: 15%;
-animation-delay: -2s;
+    top: 300px;
+    left: 15%;
+    animation-delay: -2s;
 }
 .s4 {
-top: 200px;
-left: 30%;
-animation-delay: -7s;
+    top: 200px;
+    left: 30%;
+    animation-delay: -7s;
 }
 .s5 {
-top: 160px;
-left: 35%;
-animation-delay: -8s;
+    top: 160px;
+    left: 35%;
+    animation-delay: -8s;
 }
 .s6 {
-top: 38px;
-left: 40%;
-animation-delay: -1s;
+    top: 38px;
+    left: 40%;
+    animation-delay: -1s;
 }
 .s7 {
-top: 180px;
-left: 45%;
-animation-delay: -3s;
+    top: 180px;
+    left: 45%;
+    animation-delay: -3s;
 }
 .s8 {
-top: 270px;
-left: 23%;
-animation-delay: -9s;
+    top: 270px;
+    left: 23%;
+    animation-delay: -9s;
 }
 .s9 {
-top: 130px;
-left: 55%;
-animation-delay: -10s;
+    top: 130px;
+    left: 55%;
+    animation-delay: -10s;
 }
 .s10 {
-top: 100px;
-left: 60%;
-animation-delay: -2s;
+    top: 100px;
+    left: 60%;
+    animation-delay: -2s;
 }
 .s11 {
-top: 50px;
-left: 65%;
-animation-delay: -4s;
+    top: 50px;
+    left: 65%;
+    animation-delay: -4s;
 }
 .s12 {
-top: 250px;
-left: 70%;
-animation-delay: -11s;
+    top: 250px;
+    left: 70%;
+    animation-delay: -11s;
 }
 .s13 {
-top: 100px;
-left: 75%;
-animation-delay: -12s;
+    top: 100px;
+    left: 75%;
+    animation-delay: -12s;
 }
 .s14 {
-top: 200px;
-left: 80%;
-animation-delay: -2.8s;
+    top: 200px;
+    left: 80%;
+    animation-delay: -2.8s;
 }
 .s15 {
-top: 160px;
-left: 85%;
-animation-delay: -5s;
+    top: 160px;
+    left: 85%;
+    animation-delay: -5s;
 }
 .s16 {
-top: 38px;
-left: 90%;
-animation-delay: -3.2s;
+    top: 38px;
+    left: 90%;
+    animation-delay: -3.2s;
 }
 .s17 {
-top: 180px;
-left: 95%;
-animation-delay: -13s;
+    top: 180px;
+    left: 95%;
+    animation-delay: -13s;
 }
 .s18 {
-top: 270px;
-left: 97%;
-animation-delay: -6s;
+    top: 270px;
+    left: 97%;
+    animation-delay: -6s;
 }
 .s19 {
-top: 130px;
-left: 5%;
-animation-delay: -3.8s;
+    top: 130px;
+    left: 5%;
+    animation-delay: -3.8s;
 }
 .s20 {
-top: 70px;
-left: 50%;
-animation-delay: -4s;
+    top: 70px;
+    left: 50%;
+    animation-delay: -4s;
 }
-
-
 @keyframes star-animation{
     0%{
         visibility: visible;
@@ -523,7 +501,6 @@ animation-delay: -4s;
     }
 }
 
-
 .content-container{
     margin: 20px 20px;
 }
@@ -533,7 +510,6 @@ animation-delay: -4s;
     margin: 40px auto 80px auto; 
     max-width: 900px;
 }
-
 
 .underline-container{
     text-align: center;
@@ -558,15 +534,12 @@ animation-delay: -4s;
     max-width: 400px;
 }
 
-
 .visible{
     display: inline;
 }
 .hidden{
     display: none;
 }
-
-
 
 .card .info-container{
     text-align: center;
@@ -579,14 +552,11 @@ animation-delay: -4s;
     margin-top: 30px;
 }
 
-
 .btn-container{
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-
 
 .page .image-container{
     display: flex;
@@ -595,15 +565,10 @@ animation-delay: -4s;
     user-select: none;
 }
 
-
 .page .image-container img{
     margin-right: 20px;
     width: fit-content;
 }
-
-
-
-
 
 .fullscreen-img {
   position: fixed;
@@ -637,11 +602,6 @@ body.no-scroll {
   overflow: hidden;
 }
 
-
-
-
-
-
 .page-heading{
     font-weight: bold;
 }
@@ -656,20 +616,11 @@ body.no-scroll {
     max-width: 100%;
     height: auto;
     border-radius: 20px;
- 
 }
 
 .icon{
     margin: 20px 2px 0 2px;
     filter: var(--icon-color);
-}
-
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-
-
-
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -679,16 +630,12 @@ body.no-scroll {
         margin-bottom: 100px;
         max-width: 720px;
     }
-
     .visible{
         display: flex;
     }
-    
-
     .card{
         width: 100%;
     }
-
     .card .info-container{
         max-width: 300px;
         position: relative;
@@ -717,8 +664,6 @@ body.no-scroll {
     .work-container.left .card .info-container button{
         right: 0;
     }
-
-
     .page.visible{
         display: inline;
     }
@@ -732,13 +677,7 @@ body.no-scroll {
         max-width: 100%;
         margin: 10px 10px 10px 20px;
     }
-
-
-
 }
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {...}
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1500px) {

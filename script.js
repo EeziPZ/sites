@@ -1,3 +1,5 @@
+
+//---JavaScript for Read-More---
 const readmoreBtn = document.querySelectorAll(".toggleVisibility");
 
 function toggleVisibility(id) {
@@ -7,7 +9,6 @@ function toggleVisibility(id) {
   document.getElementById(elementId + "page").classList.toggle("hidden");
   document.getElementById(elementId + "page").classList.toggle("visible");
 }
-
 
 for (let i = 0; i < readmoreBtn.length; i++) {
   readmoreBtn[i].addEventListener('click', (e) => {
@@ -20,7 +21,7 @@ for (let i = 0; i < readmoreBtn.length; i++) {
   });
 }
 
-
+//---JavaScript for Full-Screen Image---
 const thumbnails = document.querySelectorAll('.thumbnail');
 const fullscreenImgContainer = document.createElement('div');
 fullscreenImgContainer.classList.add('fullscreen-img');
@@ -48,17 +49,10 @@ closeButton.addEventListener('click', function () {
   fullscreenImg.src = '';
 });
 
-
-
-
-
-
-
-
+//---JavaScript for Day/Night Theme---
 var r = document.querySelector(':root');
 var toggle = document.getElementById('toggle');
 const stars = document.querySelectorAll('.star');
-
 toggle.checked = false;
 
 function toggleTheme() {
@@ -71,12 +65,13 @@ function toggleTheme() {
     skyContainer.classList.remove('day-gradient');
   }
 
+  for (const star of stars) {
+    star.classList.toggle('star');
+  }
 
   const currentBodyColor = r.style.getPropertyValue('--body-color');
   const newBodyColor = currentBodyColor === '#92C4BF' ? '#043959' : '#92C4BF';
   r.style.setProperty('--body-color', newBodyColor);
-
-
 
   const currentLS1Color = r.style.getPropertyValue('--landscape-1-color');
   const newLS1Color = currentLS1Color === '#C8E4E5' ? '#9ec2e6' : '#C8E4E5';
@@ -94,8 +89,6 @@ function toggleTheme() {
   const newLS4Color = currentLS4Color === '#A3D0C8' ? '#135e96' : '#A3D0C8';
   r.style.setProperty('--landscape-4-color', newLS4Color);
 
-
-
   const currentD1Color = r.style.getPropertyValue('--disk-1-color');
   const newD1Color = currentD1Color === '#FFF69E' ? '#72aee6' : '#FFF69E';
   r.style.setProperty('--disk-1-color', newD1Color);
@@ -108,41 +101,29 @@ function toggleTheme() {
   const newD3Color = currentD3Color === '#FFD700' ? '#f0f6fc' : '#FFD700';
   r.style.setProperty('--disk-3-color', newD3Color);
 
-
-  for (const star of stars) {
-    star.classList.toggle('star');
-  }
-
   const currentPColor = r.style.getPropertyValue('--p-color');
   const newPColor = currentPColor === '#474b48' ? '#d2d7d3' : '#474b48';
   r.style.setProperty('--p-color', newPColor);
-
 
   const currentHColor = r.style.getPropertyValue('--heading-color');
   const newHColor = currentHColor === '#34495e' ? '#DE9126' : '#34495e';
   r.style.setProperty('--heading-color', newHColor);
 
+  const currentH3Color = r.style.getPropertyValue('--heading-3-color');
+  const newH3Color = currentH3Color === '#1c2833' ? '#f0f6fc' : '#1c2833';
+  r.style.setProperty('--heading-3-color', newH3Color);
 
   const currentAColor = r.style.getPropertyValue('--accent-color');
   const newAColor = currentAColor === '#436e43' ? '#e05c5d' : '#436e43';
   r.style.setProperty('--accent-color', newAColor);
 
-
-  const currentH3Color = r.style.getPropertyValue('--heading-3-color');
-  const newH3Color = currentH3Color === '#1c2833' ? '#f0f6fc' : '#1c2833';
-  r.style.setProperty('--heading-3-color', newH3Color);
-
   const currentWBGColor = r.style.getPropertyValue('--work-container-bg');
   const newWBGColor = currentWBGColor === 'rgba(177, 240, 233, 0.1)' ? 'rgba(0, 0, 0, 0.1)' : 'rgba(177, 240, 233, 0.1)';
   r.style.setProperty('--work-container-bg', newWBGColor);
 
-
   const currentIconColor = r.style.getPropertyValue('--icon-color');
   const newIconColor = currentIconColor === 'invert(35%) sepia(21%) saturate(782%) hue-rotate(71deg) brightness(101%) contrast(92%)' ? 'invert(44%) sepia(58%) saturate(977%) hue-rotate(316deg) brightness(95%) contrast(83%)' : 'invert(35%) sepia(21%) saturate(782%) hue-rotate(71deg) brightness(101%) contrast(92%)';
   r.style.setProperty('--icon-color', newIconColor);
-
-
-
 
   const currentT1Color = r.style.getPropertyValue('--tree-color-1');
   const newT1Color = currentT1Color === '#00D420' ? '#386fa4' : '#00D420';
@@ -151,6 +132,5 @@ function toggleTheme() {
   const currentT2Color = r.style.getPropertyValue('--tree-color-2');
   const newT2Color = currentT2Color === '#00A819' ? '#133c55' : '#00A819';
   r.style.setProperty('--tree-color-2', newT2Color);
-
 }
 toggle.addEventListener('change', toggleTheme);
