@@ -1,1 +1,1 @@
-The Repo for my website portfolio site found at jamielake.net. 
+The Repo for my website portfolio site found at eezipz.github.io/sites/
